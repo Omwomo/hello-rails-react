@@ -1,3 +1,5 @@
+import '../stylesheets/application.css';
+import '../components/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
