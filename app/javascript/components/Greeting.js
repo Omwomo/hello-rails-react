@@ -4,7 +4,7 @@ const Greeting = () => {
   const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
-    fetch('/random_greeting')
+    fetch('http://127.0.0.1:3000/random_greeting')
       .then(response => response.json())
       .then(data => setGreeting(data.greeting))
       .catch(error => console.error('Error:', error));
