@@ -1,25 +1,18 @@
 // Greeting.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setGreeting, selectGreeting } from '../slices/greetingSlice';
 
 const Greeting = () => {
-  const [greeting, setGreeting] = useState('');
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('http://127.0.0.1:3000/random_greeting');
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-      setGreeting(data.greeting);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+  const dispatch = useDispatch();
+  const greeting = useSelector(selectGreeting);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetch('http://127.0.0.1:3000/random_greeting')
+      .then(response => response.json())
+      .then(data => dispatch(setGreeting(data.greeting)))
+      .catch(error => console.error('Error:', error));
+  }, [dispatch]);
 
   return (
     <div>
