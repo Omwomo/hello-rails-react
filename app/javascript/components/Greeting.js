@@ -1,18 +1,29 @@
-// Greeting.js
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setGreeting, selectGreeting } from '../slices/greetingSlice';
+import { fetchRandomGreeting } from '../thunks/greetingThunk';
+import {
+  selectGreeting,
+  selectGreetingStatus,
+  selectGreetingError,
+} from '../slices/greetingSlice';
 
 const Greeting = () => {
   const dispatch = useDispatch();
   const greeting = useSelector(selectGreeting);
+  const status = useSelector(selectGreetingStatus);
+  const error = useSelector(selectGreetingError);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/random_greeting')
-      .then(response => response.json())
-      .then(data => dispatch(setGreeting(data.greeting)))
-      .catch(error => console.error('Error:', error));
+    dispatch(fetchRandomGreeting());
   }, [dispatch]);
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div>
