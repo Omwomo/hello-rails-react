@@ -1,0 +1,26 @@
+=> 
+[[32m#<Message:0x000055d69c5dfa20[0m
+  id: [34m[1m1[0m,
+  content: [31m[1m"[0m[31mHello![0m[31m[1m"[0m,
+  created_at: Fri, 22 Dec 2023 01:52:24.812896000 UTC +00:00,
+  updated_at: Fri, 22 Dec 2023 01:52:24.812896000 UTC +00:00[32m>[0m,
+ [32m#<Message:0x000055d69c66a7d8[0m
+  id: [34m[1m2[0m,
+  content: [31m[1m"[0m[31mHi there![0m[31m[1m"[0m,
+  created_at: Fri, 22 Dec 2023 01:52:38.780829000 UTC +00:00,
+  updated_at: Fri, 22 Dec 2023 01:52:38.780829000 UTC +00:00[32m>[0m,
+ [32m#<Message:0x000055d69c66a710[0m
+  id: [34m[1m3[0m,
+  content: [31m[1m"[0m[31mWelcome![0m[31m[1m"[0m,
+  created_at: Fri, 22 Dec 2023 01:52:57.179743000 UTC +00:00,
+  updated_at: Fri, 22 Dec 2023 01:52:57.179743000 UTC +00:00[32m>[0m,
+ [32m#<Message:0x000055d69c66a648[0m
+  id: [34m[1m4[0m,
+  content: [31m[1m"[0m[31mGreetings[0m[31m[1m"[0m,
+  created_at: Fri, 22 Dec 2023 01:53:11.003625000 UTC +00:00,
+  updated_at: Fri, 22 Dec 2023 01:53:11.003625000 UTC +00:00[32m>[0m,
+ [32m#<Message:0x000055d69c66a580[0m
+  id: [34m[1m5[0m,
+  content: [31m[1m"[0m[31mGood day![0m[31m[1m"[0m,
+  created_at: Fri, 22 Dec 2023 01:53:26.277815000 UTC +00:00,
+  updated_at: Fri, 22 Dec 2023 01:53:26.277815000 UTC +00:00[32m>[0m]
